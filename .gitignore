@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Logs
+nohup.out
+*.log
+
+# Environment variables
+.env
+
+# Database files
+alerts.db
+
+# Compiled files
+*.pyc
+*.class
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Misc
+.vscode/
+.idea/

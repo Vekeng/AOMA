@@ -1,0 +1,27 @@
+{
+  "name": "aoma",
+  "version": "1.0.0",
+  "description": "Albion Online Market Alert",
+  "main": "bot.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vekeng/AOMA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vekeng/AOMA/issues"
+  },
+  "homepage": "https://github.com/Vekeng/AOMA#readme",
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "node-fetch": "^3.3.2",
+    "sqlite3": "^5.1.7"
+  }
+}
