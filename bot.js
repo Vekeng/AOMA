@@ -202,8 +202,8 @@ async function checkAlerts(client) {
         const matching_items = data.filter(item => item.item_id === alert.item_id && String(item.quality) === String(alert.item_quality));
 
         matching_items.forEach(match => {
-            const trigger = (alert.direction === "higher" && alert.price_threshold < match.sell_price_min && match.sell_price_min !== 0) || 
-            (alert.direction === "lower" && alert.price_threshold > match.sell_price_min && match.sell_price_min !== 0); 
+            const trigger = (alert.direction === "higher" && alert.price_threshold < match.sell_price_min && match.sell_price_min !== 0 && match.sell_price_min !== match.sell_price_max) || 
+            (alert.direction === "lower" && alert.price_threshold > match.sell_price_min && match.sell_price_min !== 0 && match.sell_price_min !== match.sell_price_max); 
             
             if (trigger) {
                 if (!cityAlerts[match.city]) {
