@@ -202,6 +202,10 @@ async function checkAlerts(client) {
         const matching_items = data.filter(item => item.item_id === alert.item_id && String(item.quality) === String(alert.item_quality));
 
         matching_items.forEach(match => {
+            // For now ignoring Caerleon, as it produces too much false-positives
+            if (match.city === "Caerleon") {
+                return; 
+            }
             const trigger = (alert.direction === "higher" && alert.price_threshold < match.sell_price_min && match.sell_price_min !== 0 && match.sell_price_min !== match.sell_price_max) || 
             (alert.direction === "lower" && alert.price_threshold > match.sell_price_min && match.sell_price_min !== 0 && match.sell_price_min !== match.sell_price_max); 
             
